@@ -1,0 +1,9 @@
+streamlit>=1.20
+google-genai>=0.7.0      # Google GenAI SDK (Gemini). Adjust version as appropriate.
+faiss-cpu>=1.7.4
+numpy>=1.23
+PyPDF2>=3.0
+python-dotenv>=1.0.0
+langchain-core>=0.0.5    # for the message classes used in app.py
+requests>=2.28
+tqdm>=4.65
