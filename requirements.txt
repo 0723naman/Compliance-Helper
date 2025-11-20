@@ -7,3 +7,4 @@ python-dotenv>=1.0.0
 langchain-core>=0.0.5    # for the message classes used in app.py
 requests>=2.28
 tqdm>=4.65
+pdfplumber
