@@ -1,66 +1,3 @@
-# # utils/retriever.py
-# import os
-# import json
-# from config import config
-# from models.embeddings import embed_texts
-
-# def load_index_and_meta():
-#     try:
-#         import faiss
-#     except Exception:
-#         raise RuntimeError("faiss-cpu required. pip install faiss-cpu")
-#     if not (os.path.exists(config.VECTOR_STORE_PATH) and os.path.exists(config.METADATA_PATH)):
-#         raise FileNotFoundError("Vector index or metadata missing. Build the index first.")
-#     index = faiss.read_index(config.VECTOR_STORE_PATH)
-#     with open(config.METADATA_PATH, "r", encoding="utf-8") as f:
-#         metadata = json.load(f)
-#     return index, metadata
-
-# def retrieve(query: str, index, metadata, k: int = None):
-#     import numpy as np
-#     import faiss
-#     k = k or config.MAX_RETRIEVALS
-#     q_emb = embed_texts([query])[0]
-#     q_arr = np.array([q_emb]).astype("float32")
-#     faiss.normalize_L2(q_arr)
-#     D, I = index.search(q_arr, k)
-#     results = []
-#     for score, idx in zip(D[0], I[0]):
-#         if idx < 0 or idx >= len(metadata):
-#             continue
-#         m = metadata[idx]
-#         results.append({
-#             "score": float(score),
-#             "doc_id": m.get("doc_id"),
-#             "chunk_id": m.get("chunk_id"),
-#             "text": m.get("text")
-#         })
-#     return results
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# utils/retriever.py
 import os
 import json
 from config import config
@@ -141,3 +78,4 @@ def retrieve(query: str, index, metadata, k: int = None, lexical_k: int = 10, si
     results.sort(key=lambda x: x["score"], reverse=True)
     # return up to k results (but allow more for inspection)
     return results[: max(k, len(results))]
+
