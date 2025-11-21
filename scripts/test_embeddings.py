@@ -1,4 +1,3 @@
-# scripts/test_embeddings.py
 import os, sys
 from pathlib import Path
 
@@ -23,3 +22,4 @@ try:
     print("First embedding (first 8 dims):", embs[0][:8])
 except Exception as e:
     print("Embedding test failed:", repr(e))
+
