@@ -1,4 +1,3 @@
-# utils/response_formatter.py
 from typing import List, Dict
 
 BASE_SYSTEM_INSTRUCTION = (
@@ -24,3 +23,4 @@ def build_system_prompt(retrieved: List[Dict], max_chars_per_snippet: int = 1200
 
     prompt = f"{BASE_SYSTEM_INSTRUCTION}\n\nContext:\n{context_block}\n\nWhen you answer, cite the source labels inline where appropriate."
     return prompt
+
