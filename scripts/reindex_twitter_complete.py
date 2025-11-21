@@ -1,4 +1,3 @@
-# scripts/reindex_twitter_complete.py
 import os, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -17,3 +16,4 @@ print(f"Indexed {len(meta)} chunks.")
 print("Wrote index to:", config.VECTOR_STORE_PATH)
 print("Wrote metadata to:", config.METADATA_PATH)
 print("Debug file at:", Path(config.VECTOR_STORE_PATH).parent / "ingest_debug.json")
+
