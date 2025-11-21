@@ -1,4 +1,3 @@
-# models/llm.py
 from typing import List
 from config import config
 
@@ -94,3 +93,4 @@ def get_chatgroq_model():
     Factory function used in your app template.
     """
     return GeminiChatWrapper()
+
