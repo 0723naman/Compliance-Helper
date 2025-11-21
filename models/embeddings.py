@@ -1,4 +1,3 @@
-# models/embeddings.py
 from typing import List, Any
 from config import config
 import json
@@ -183,3 +182,4 @@ def embed_texts(texts: List[str]) -> List[List[float]]:
         f"{raw}\n\n"
         "If you see an unfamiliar structure, paste the truncated response here and I will adapt the parser."
     )
+
