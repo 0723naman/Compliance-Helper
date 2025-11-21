@@ -1,4 +1,3 @@
-# config/config.py
 import os
 from pathlib import Path
 from dotenv import load_dotenv
@@ -31,3 +30,4 @@ MAX_RETRIEVALS = int(os.getenv("MAX_RETRIEVALS", 6))
 # Web fallback (not recommended for private/internal policies)
 ALLOW_WEB_FALLBACK = os.getenv("ALLOW_WEB_FALLBACK", "false").lower() == "true"
 SERPAPI_KEY = os.getenv("SERPAPI_KEY", "")
+
