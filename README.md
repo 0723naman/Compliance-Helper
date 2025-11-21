@@ -1,9 +1,12 @@
 ````markdown
 # Compliance Helper — AI-Powered Internal Policy Assistant
 
-The **Compliance Helper** is an AI-powered chatbot that helps employees quickly find accurate answers from internal company policies, guidelines, and compliance documents. It uses a Retrieval-Augmented Generation (RAG) architecture built with **Gemini 1.5 Flash**, **FAISS**, and a **Streamlit** user interface.
+The Compliance Helper is an AI-powered chatbot that helps employees quickly find accurate answers from internal company
+policies, guidelines, and compliance documents. It uses a Retrieval-Augmented Generation (RAG) architecture built with
+Gemini 1.5 Flash, FAISS, and a Streamlit* user interface.
 
-This project is designed to streamline policy discovery, reduce compliance uncertainty, and enable organizations to provide reliable support for internal queries.
+This project is designed to streamline policy discovery, reduce compliance uncertainty, and enable organizations to
+provide reliable support for internal queries.
 
 ---
 
@@ -24,28 +27,29 @@ This project is designed to streamline policy discovery, reduce compliance uncer
 - Receive contextual answers grounded in your documents  
 
 ### Document Ingestion Pipeline
-- PDF text extraction via `PyPDF2`  
+- PDF text extraction via PyPDF2  
 - Cleaning and normalizing long-form policy documents  
 - Chunking logic designed for compliance/legal content  
 - Batch embedding + normalization for FAISS  
 
 ### Safe & Secure
-- `.env` used for storing API keys  
+- .env used for storing API keys  
 - No raw PDF content is sent to Gemini — only embeddings  
-- `venv/` excluded from repository  
+- venv/ excluded from repository  
 
 ---
 
 ## Why This Project Is Useful
 
-Organizations often store critical compliance documents in long and complex PDFs. Employees struggle to locate the exact clause or rule they need, leading to:
+Organizations often store critical compliance documents in long and complex PDFs. Employees struggle to locate the
+exact clause or rule they need, leading to:
 
 - Misinterpretation of policies  
 - Repeated dependency on HR/legal teams  
 - Slow onboarding  
 - Increased compliance risk  
 
-**Compliance Helper solves this by enabling fast, accurate, citation-backed responses based on internal policies.**
+Compliance Helper solves this by enabling fast, accurate, citation-backed responses based on internal policies.
 
 ---
 
@@ -88,7 +92,7 @@ pip install -r requirements.txt
 
 ## 4. Set up environment variables
 
-Create `.env` in the project root:
+Create .env in the project root:
 
 ```
 GEMINI_API_KEY=YOUR_API_KEY
@@ -104,17 +108,7 @@ CHUNK_OVERLAP=200
 
 Place your PDF/TXT files inside the project or note their file path.
 
-Update the ingestion script:
-
-```
-scripts/reindex_twitter_complete.py
-```
-
-Run the indexing script:
-
-```bash
-python scripts/reindex_twitter_complete.py
-```
+After clicking on build index:
 
 This generates:
 
@@ -228,19 +222,3 @@ Future improvements will include:
 
 This project uses the MIT License.
 See the `LICENSE` file for more details.
-
-```
-
----
-
-## Want a more advanced README?
-
-I can generate:
-
-- Badge-rich GitHub README  
-- README with project diagrams + architecture diagram (ASCII or image)  
-- README with inline GIF demos  
-- README optimized for HR visibility (portfolio-style)
-
-Just tell me.
-```
